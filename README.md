@@ -1,7 +1,5 @@
 # ClubHouse clone
-### Show some 🌟 and ❤️ the repo to support the projec
-
-### Screenshots 
+### Show some 🌟 and ❤️ the repo to support the project
  
 
  # Demo  
