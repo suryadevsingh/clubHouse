@@ -21,8 +21,8 @@ class _LobbyBottomSheetState extends State<LobbyBottomSheet> {
     return Container(
       padding: const EdgeInsets.only(
         top: 10,
-        right: 20,
-        left: 20,
+        right: 10,
+        left: 10,
         bottom: 20,
       ),
       child: Column(
@@ -52,49 +52,51 @@ class _LobbyBottomSheetState extends State<LobbyBottomSheet> {
             height: 20,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               for (var i = 0, len = 3; i < len; i++)
-                InkWell(
-                  borderRadius: BorderRadius.circular(15),
-                  onTap: () {
-                    setState(() {
-                      selectedButtonIndex = i;
-                    });
-                  },
-                  child: Ink(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 5,
-                    ),
-                    decoration: BoxDecoration(
-                        color: i == selectedButtonIndex
-                            ? Style.SelectedItemGrey
-                            : Colors.transparent,
-                        borderRadius: BorderRadius.circular(15),
-                        border: Border.all(
+                Flexible(
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(15),
+                    onTap: () {
+                      setState(() {
+                        selectedButtonIndex = i;
+                      });
+                    },
+                    child: Ink(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 15,
+                        vertical: 5,
+                      ),
+                      decoration: BoxDecoration(
                           color: i == selectedButtonIndex
-                              ? Style.SelectedItemBorderGrey
+                              ? Style.SelectedItemGrey
                               : Colors.transparent,
-                        )),
-                    child: Column(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.only(bottom: 5),
-                          child: RoundImage(
-                            width: 80,
-                            height: 80,
-                            borderRadius: 20,
-                            path: lobbyBottomSheets[i]['image'],
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(
+                            color: i == selectedButtonIndex
+                                ? Style.SelectedItemBorderGrey
+                                : Colors.transparent,
+                          )),
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.only(bottom: 5),
+                            child: RoundImage(
+                              width: 80,
+                              height: 80,
+                              borderRadius: 20,
+                              path: lobbyBottomSheets[i]['image'],
+                            ),
                           ),
-                        ),
-                        Text(
-                          lobbyBottomSheets[i]['text'],
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                          Text(
+                            lobbyBottomSheets[i]['text'],
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
