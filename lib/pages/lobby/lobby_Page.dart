@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clubhouse/models/room.dart';
+import 'package:flutter_clubhouse/pages/room/room_Page.dart';
 import 'package:flutter_clubhouse/utils/data.dart';
 import 'package:flutter_clubhouse/utils/style.dart';
 import 'package:flutter_clubhouse/widgets/round_button.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-import 'lobby_bottom_sheet.dart';
-import 'room_Card.dart';
-import 'room_Page.dart';
-import 'schedule_Card.dart';
+import 'widgets/lobby_bottom_sheet.dart';
+import 'widgets/room_Card.dart';
+import 'widgets/schedule_Card.dart';
+
 
 class LobbyPage extends StatefulWidget {
   @override

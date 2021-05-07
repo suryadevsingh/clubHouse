@@ -2,14 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clubhouse/models/User.dart';
 import 'package:flutter_clubhouse/models/room.dart';
+import 'package:flutter_clubhouse/pages/home/profile_Page.dart';
 import 'package:flutter_clubhouse/utils/data.dart';
 import 'package:flutter_clubhouse/utils/history.dart';
 import 'package:flutter_clubhouse/utils/style.dart';
 import 'package:flutter_clubhouse/widgets/round_Image.dart';
 import 'package:flutter_clubhouse/widgets/round_button.dart';
 
-import 'profile_Page.dart';
-import 'room_Profile.dart';
+import 'widgets/room_Profile.dart';
+
 
 class RoomPage extends StatelessWidget {
   final Room room;

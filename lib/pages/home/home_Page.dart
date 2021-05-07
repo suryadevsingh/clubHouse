@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clubhouse/pages/lobby/follower_Page.dart';
+import 'package:flutter_clubhouse/pages/lobby/lobby_Page.dart';
 import 'package:flutter_clubhouse/utils/data.dart';
 import 'package:flutter_clubhouse/utils/history.dart';
 
-import 'follower_Page.dart';
-import 'home_App_Bar.dart';
-import 'lobby_Page.dart';
 import 'profile_Page.dart';
+import 'widgets/home_App_Bar.dart';
 
 class HomePage extends StatelessWidget {
   @override

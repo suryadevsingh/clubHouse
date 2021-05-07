@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clubhouse/pages/home/home_Page.dart';
 import 'package:flutter_clubhouse/utils/history.dart';
 import 'package:flutter_clubhouse/utils/style.dart';
 import 'package:flutter_clubhouse/widgets/round_button.dart';
 
-import 'home_Page.dart';
 
 class PickPhotoPage extends StatelessWidget {
   const PickPhotoPage({Key key}) : super(key: key);

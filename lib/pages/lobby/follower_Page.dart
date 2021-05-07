@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clubhouse/models/room.dart';
+import 'package:flutter_clubhouse/pages/home/profile_Page.dart';
+import 'package:flutter_clubhouse/pages/room/room_Page.dart';
 import 'package:flutter_clubhouse/utils/data.dart';
 import 'package:flutter_clubhouse/utils/history.dart';
 import 'package:flutter_clubhouse/utils/style.dart';
 
-import 'follower_Item.dart';
-import 'profile_Page.dart';
-import 'room_Page.dart';
+import 'widgets/follower_Item.dart';
+
 
 class FollowerPage extends StatelessWidget {
   @override
