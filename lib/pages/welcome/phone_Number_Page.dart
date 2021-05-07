@@ -62,11 +62,12 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
       child: Row(
         children: [
           CountryCodePicker(
-            initialSelection: "KR",
+            initialSelection: "IN",
             showCountryOnly: false,
             alignLeft: false,
             padding: const EdgeInsets.all(8),
             textStyle: TextStyle(fontSize: 20),
+
           ),
           Expanded(
             child: Form(
