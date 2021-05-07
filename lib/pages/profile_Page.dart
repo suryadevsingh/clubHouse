@@ -136,7 +136,9 @@ class ProfilePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Joined Mar 28, 2021'),
-            SizedBox(height: 3,),
+            SizedBox(
+              height: 3,
+            ),
             RichText(
               text: TextSpan(
                 children: <TextSpan>[

@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 
 class RoundImage extends StatelessWidget {
-
   final String url;
   final String path;
   final double width;
@@ -13,13 +11,12 @@ class RoundImage extends StatelessWidget {
   const RoundImage({
     Key key,
     this.url,
-    this.path="",
-    this.width=40,
-    this.height=40,
+    this.path = "",
+    this.width = 40,
+    this.height = 40,
     this.margin,
-    this.borderRadius=40,
+    this.borderRadius = 40,
   }) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -28,12 +25,11 @@ class RoundImage extends StatelessWidget {
       width: width,
       margin: margin,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(borderRadius),
-        image: DecorationImage(
-          image: path.isNotEmpty ? AssetImage(path) : NetworkImage(url),
-          fit: BoxFit.cover,
-        )
-      ),
+          borderRadius: BorderRadius.circular(borderRadius),
+          image: DecorationImage(
+            image: path.isNotEmpty ? AssetImage(path) : NetworkImage(url),
+            fit: BoxFit.cover,
+          )),
     );
   }
 }

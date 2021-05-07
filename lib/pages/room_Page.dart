@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clubhouse/models/User.dart';
@@ -13,7 +12,6 @@ import 'profile_Page.dart';
 import 'room_Profile.dart';
 
 class RoomPage extends StatelessWidget {
-
   final Room room;
 
   const RoomPage({Key key, this.room}) : super(key: key);
@@ -66,12 +64,11 @@ class RoomPage extends StatelessWidget {
           bottom: 20,
         ),
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(30),
-            topLeft: Radius.circular(30),
-          )
-        ),
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(30),
+              topLeft: Radius.circular(30),
+            )),
         child: Stack(
           children: [
             SingleChildScrollView(
@@ -82,10 +79,11 @@ class RoomPage extends StatelessWidget {
               child: Column(
                 children: [
                   buildTitle(room.title),
-                  SizedBox(height: 30,),
-                  buildSpeakers(room.users.sublist(0,room.speakerCount)),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  buildSpeakers(room.users.sublist(0, room.speakerCount)),
                   buildOthers(room.users.sublist(room.speakerCount)),
-
                 ],
               ),
             ),
@@ -99,7 +97,7 @@ class RoomPage extends StatelessWidget {
     );
   }
 
-  Widget buildTitle(String title){
+  Widget buildTitle(String title) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -124,20 +122,20 @@ class RoomPage extends StatelessWidget {
     );
   }
 
-  Widget buildSpeakers(List<User> users){
+  Widget buildSpeakers(List<User> users) {
     return GridView.builder(
       shrinkWrap: true,
       physics: ScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
-      mainAxisExtent: 150,
-    ),
+        mainAxisExtent: 150,
+      ),
       itemCount: users.length,
-      itemBuilder: (gc, index){
+      itemBuilder: (gc, index) {
         return RoomProfile(
           user: users[index],
-          isModerator: index ==0,
-          isMute: index ==3,
+          isModerator: index == 0,
+          isMute: index == 3,
           size: 80,
         );
       },
@@ -222,5 +220,4 @@ class RoomPage extends StatelessWidget {
       ),
     );
   }
-
 }

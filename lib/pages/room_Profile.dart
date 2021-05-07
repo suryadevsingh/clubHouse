@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_clubhouse/models/User.dart';
 import 'package:flutter_clubhouse/utils/history.dart';
@@ -9,19 +7,18 @@ import 'package:flutter_clubhouse/widgets/round_Image.dart';
 import 'profile_Page.dart';
 
 class RoomProfile extends StatelessWidget {
-
   final User user;
   final double size;
   final bool isMute;
   final bool isModerator;
 
-  const RoomProfile({
-    Key key,
-    this.user,
-    this.size,
-    this.isMute=false,
-    this.isModerator = false
-  }) : super(key: key);
+  const RoomProfile(
+      {Key key,
+      this.user,
+      this.size,
+      this.isMute = false,
+      this.isModerator = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,12 +26,13 @@ class RoomProfile extends StatelessWidget {
       children: [
         Stack(
           children: [
-
             GestureDetector(
-              onTap: (){
-                History.pushPage(context, ProfilePage(
-                  profile:user,
-                ));
+              onTap: () {
+                History.pushPage(
+                    context,
+                    ProfilePage(
+                      profile: user,
+                    ));
               },
               child: RoundImage(
                 path: user.profileImage,
@@ -70,17 +68,17 @@ class RoomProfile extends StatelessWidget {
   Widget buildModeratorBadge(bool isModerator) {
     return isModerator
         ? Container(
-      margin: const EdgeInsets.only(right: 5),
-      decoration: BoxDecoration(
-        color: Style.AccentGreen,
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child: Icon(
-        Icons.star,
-        color: Colors.white,
-        size: 12,
-      ),
-    )
+            margin: const EdgeInsets.only(right: 5),
+            decoration: BoxDecoration(
+              color: Style.AccentGreen,
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Icon(
+              Icons.star,
+              color: Colors.white,
+              size: 12,
+            ),
+          )
         : Container();
   }
 
@@ -90,20 +88,20 @@ class RoomProfile extends StatelessWidget {
       bottom: 0,
       child: isMute
           ? Container(
-        width: 25,
-        height: 25,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(50),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              offset: Offset(0, 1),
+              width: 25,
+              height: 25,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    offset: Offset(0, 1),
+                  )
+                ],
+              ),
+              child: Icon(Icons.mic_off),
             )
-          ],
-        ),
-        child: Icon(Icons.mic_off),
-      )
           : Container(),
     );
   }
@@ -114,28 +112,27 @@ class RoomProfile extends StatelessWidget {
       bottom: 0,
       child: isNewUser
           ? Container(
-        width: 25,
-        height: 25,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(50),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              offset: Offset(0, 1),
+              width: 25,
+              height: 25,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    offset: Offset(0, 1),
+                  )
+                ],
+              ),
+              child: Text(
+                '🎉',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
             )
-          ],
-        ),
-        child: Text(
-          '🎉',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 18,
-          ),
-        ),
-      )
           : Container(),
     );
   }
-
 }

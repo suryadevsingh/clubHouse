@@ -1,10 +1,9 @@
-
 import 'package:flutter/material.dart';
 
 import 'pages/welcome_page.dart';
 import 'utils/style.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
 
@@ -17,15 +16,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: " Clubhouse ",
       theme: ThemeData(
-        scaffoldBackgroundColor: Style.LightBrown,
-        appBarTheme: AppBarTheme(
-          color: Style.LightBrown,
-          elevation: 0,
-          iconTheme: IconThemeData(
-            color: Colors.black
-          )
-        )
-      ),
+          scaffoldBackgroundColor: Style.LightBrown,
+          appBarTheme: AppBarTheme(
+              color: Style.LightBrown,
+              elevation: 0,
+              iconTheme: IconThemeData(color: Colors.black))),
       home: WelcomePage(),
     );
   }

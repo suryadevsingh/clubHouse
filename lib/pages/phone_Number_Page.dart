@@ -1,4 +1,3 @@
-
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clubhouse/utils/history.dart';
@@ -15,7 +14,6 @@ class PhoneNumberPage extends StatefulWidget {
 }
 
 class _PhoneNumberPageState extends State<PhoneNumberPage> {
-
   final _phoneNumberController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   Function onSignUpButtonClick;
@@ -33,7 +31,9 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
         child: Column(
           children: [
             buildTitle(),
-            SizedBox(height: 50,),
+            SizedBox(
+              height: 50,
+            ),
             buildForm(),
             Spacer(),
             buildBottom(),
@@ -52,7 +52,7 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
     );
   }
 
-  Widget buildForm(){
+  Widget buildForm() {
     return Container(
       width: 330,
       decoration: BoxDecoration(
@@ -66,9 +66,7 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
             showCountryOnly: false,
             alignLeft: false,
             padding: const EdgeInsets.all(8),
-            textStyle: TextStyle(
-              fontSize: 20
-            ),
+            textStyle: TextStyle(fontSize: 20),
           ),
           Expanded(
             child: Form(
@@ -161,5 +159,4 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
   signUp() {
     History.pushPageUntil(context, InvitationPage());
   }
-
 }

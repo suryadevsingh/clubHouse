@@ -1,4 +1,3 @@
-
 import 'User.dart';
 
 class Room {
@@ -8,12 +7,11 @@ class Room {
 
   Room({this.title, this.users, this.speakerCount});
 
-  factory Room.fromJson(json){
+  factory Room.fromJson(json) {
     return Room(
       title: json["title"],
       users: json["users"],
       speakerCount: json["speakerCount"],
     );
   }
-
 }

@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clubhouse/utils/history.dart';
@@ -15,11 +14,7 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Container(
-        padding: const EdgeInsets.only(
-          left: 50,
-          right: 50,
-          bottom: 60
-        ),
+        padding: const EdgeInsets.only(left: 50, right: 50, bottom: 60),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -28,24 +23,23 @@ class WelcomePage extends StatelessWidget {
               height: 40,
             ),
             Expanded(child: buildContents()),
-          buildBottom(context),
+            buildBottom(context),
           ],
         ),
       ),
     );
   }
 
-  Widget buildTitle(){
+  Widget buildTitle() {
     return Text(
       "Welcome!",
-    style: TextStyle(
-      fontSize: 25,
-    ),
+      style: TextStyle(
+        fontSize: 25,
+      ),
     );
   }
 
-
-  Widget buildContents(){
+  Widget buildContents() {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,58 +75,60 @@ class WelcomePage extends StatelessWidget {
     );
   }
 
-  Widget buildBottom(BuildContext context){
+  Widget buildBottom(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         RoundButton(
           color: Style.AccentBlue,
-          onPressed: (){
+          onPressed: () {
             History.pushPage(context, PhoneNumberPage());
           },
-        child: Container(
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text("Got your username",
-              style: TextStyle(color: Colors.white,fontSize: 20),
-              ),
-              Icon(Icons.arrow_right_alt,
-              color: Colors.white,)
-            ],
+          child: Container(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Got your username",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+                Icon(
+                  Icons.arrow_right_alt,
+                  color: Colors.white,
+                )
+              ],
+            ),
           ),
         ),
+        SizedBox(
+          height: 20,
         ),
-    SizedBox(
-    height: 20,
-    ),
-    Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-    Text(
-    'Have an invite text?',
-    style: TextStyle(
-    color: Style.AccentBlue,
-    ),
-    ),
-    SizedBox(
-    width: 5,
-    ),
-    Text(
-    'Sign in',
-    style: TextStyle(
-    color: Style.AccentBlue,
-    fontWeight: FontWeight.bold,
-    ),
-    ),
-    Icon(
-    Icons.arrow_right_alt,
-    color: Style.AccentBlue,
-    ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Have an invite text?',
+              style: TextStyle(
+                color: Style.AccentBlue,
+              ),
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              'Sign in',
+              style: TextStyle(
+                color: Style.AccentBlue,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Icon(
+              Icons.arrow_right_alt,
+              color: Style.AccentBlue,
+            ),
+          ],
+        ),
       ],
-    ),
-    ],
     );
   }
-
 }

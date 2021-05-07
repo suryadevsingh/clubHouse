@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_clubhouse/utils/data.dart';
 import 'package:flutter_clubhouse/utils/history.dart';
@@ -17,9 +15,11 @@ class HomePage extends StatelessWidget {
         title: HomeAppBar(
           profile: myProfile,
           onProfileTab: () {
-            History.pushPage(context, ProfilePage(
-              profile: myProfile,
-            ));
+            History.pushPage(
+                context,
+                ProfilePage(
+                  profile: myProfile,
+                ));
           },
         ),
       ),

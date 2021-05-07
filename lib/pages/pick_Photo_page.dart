@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_clubhouse/utils/history.dart';
 import 'package:flutter_clubhouse/utils/style.dart';
@@ -18,7 +16,7 @@ class PickPhotoPage extends StatelessWidget {
           buildActionButton(context),
         ],
       ),
-      body:  Container(
+      body: Container(
         alignment: Alignment.center,
         padding: const EdgeInsets.only(
           top: 30,

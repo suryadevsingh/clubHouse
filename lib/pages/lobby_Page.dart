@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_clubhouse/models/room.dart';
 import 'package:flutter_clubhouse/utils/data.dart';
@@ -18,7 +17,7 @@ class LobbyPage extends StatefulWidget {
 
 class _LobbyPageState extends State<LobbyPage> {
   RefreshController _refreshController =
-  RefreshController(initialRefresh: false);
+      RefreshController(initialRefresh: false);
 
   void _onRefresh() async {
     await Future.delayed(Duration(milliseconds: 1000));
@@ -92,13 +91,13 @@ class _LobbyPageState extends State<LobbyPage> {
       height: 50,
       decoration: BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Style.LightBrown.withOpacity(0.2),
-              Style.LightBrown,
-            ],
-          )),
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          Style.LightBrown.withOpacity(0.2),
+          Style.LightBrown,
+        ],
+      )),
     );
   }
 
@@ -131,9 +130,9 @@ class _LobbyPageState extends State<LobbyPage> {
       context: context,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(15),
-            topRight: Radius.circular(15),
-          )),
+        topLeft: Radius.circular(15),
+        topRight: Radius.circular(15),
+      )),
       builder: (context) {
         return Wrap(
           children: [

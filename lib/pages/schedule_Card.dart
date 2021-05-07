@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -16,22 +15,21 @@ class ScheduleCard extends StatelessWidget {
         vertical: 10,
       ),
       decoration: BoxDecoration(
-        color: Style.AccentBrown,
-        borderRadius: BorderRadius.circular(20)
-      ),
+          color: Style.AccentBrown, borderRadius: BorderRadius.circular(20)),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          for(var i =0 , len =3 ; i < len ; i++)
-            Padding(padding: const EdgeInsets.all(8),
-            child: buildScheduleItem("0${7 + i }:00 PM", dummyText),
+          for (var i = 0, len = 3; i < len; i++)
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: buildScheduleItem("0${7 + i}:00 PM", dummyText),
             )
         ],
       ),
     );
   }
 
-  Widget buildScheduleItem(String time, String text){
+  Widget buildScheduleItem(String time, String text) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,18 +38,19 @@ class ScheduleCard extends StatelessWidget {
           width: 75,
           child: Text(
             time,
-            style: TextStyle(
-              color: Style.DarkBrown
-            ),
+            style: TextStyle(color: Style.DarkBrown),
           ),
         ),
-        SizedBox(width: 10,),
+        SizedBox(
+          width: 10,
+        ),
         Flexible(
           child: Column(
             children: [
               Row(
                 children: [
-                  Text("COMMUNITY CLUB",
+                  Text(
+                    "COMMUNITY CLUB",
                     style: TextStyle(
                       color: Style.AccentGrey,
                       fontSize: 12,
@@ -80,5 +79,4 @@ class ScheduleCard extends StatelessWidget {
       ],
     );
   }
-
 }

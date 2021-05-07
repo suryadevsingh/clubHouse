@@ -1,4 +1,3 @@
-
 class User {
   final String name;
   final String username;
@@ -15,10 +14,9 @@ class User {
       this.lastAccessTime,
       this.followers,
       this.following,
-      this.isNewUser
-      });
+      this.isNewUser});
 
-  factory User.fromJson(json){
+  factory User.fromJson(json) {
     return User(
       name: json['name'],
       username: json['username'],
@@ -29,5 +27,4 @@ class User {
       isNewUser: json['isNewUser'],
     );
   }
-
 }

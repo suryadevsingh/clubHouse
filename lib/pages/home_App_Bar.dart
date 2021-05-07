@@ -6,7 +6,8 @@ class HomeAppBar extends StatelessWidget {
   final User profile;
   final Function onProfileTab;
 
-  const HomeAppBar({Key key, this.profile, this.onProfileTab}) : super(key: key);
+  const HomeAppBar({Key key, this.profile, this.onProfileTab})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
